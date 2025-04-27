@@ -1,0 +1,31 @@
+.camera-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .webcam-view {
+    border: 3px solid #4caf50;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .capture-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .result-section {
+    margin-top: 20px;
+  }
+  
+  .captured-img {
+    max-width: 90%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+  }
+  
