@@ -2,7 +2,7 @@ import React from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 
 function QRCodePage() {
-  const cameraUrl = `${window.location.origin}/camera`; // مثال: http://localhost:3000/camera
+  const cameraUrl = `https://myplantie.netlify.app/Camera`; // مثال: http://localhost:3000/camera
   //navigate("/camera");
 
   return (
