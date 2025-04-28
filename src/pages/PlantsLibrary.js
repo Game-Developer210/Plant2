@@ -2,58 +2,55 @@
 import React, { useEffect, useState } from 'react';
 import PlantCard from '../components/PlantCard';
 import PlantLoader from '../components/PlantLoader';
+
 const PlantsLibrary = () => {
   const [plants, setPlants] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [filteredPlants, setFilteredPlants] = useState([]);
-  const [search, setSearch] = useState('');
+
   useEffect(() => {
     const fetchPlants = async () => {
       try {
         const res = await fetch('/api/v1/plants?token=4sFVLc2wtQXu8CKFn_NycI0fE6YetBR9rBNGdD-sA6M&page_size=20');
         if (!res.ok) throw new Error('Failed to fetch data');
-const data = await res.json();
-console.log('✅ Received data:', data);
-if (data && data.data) {
-setPlants(data.data);
-setLoading(false)
-} else {
-setError('⚠️ No plant data found!');
-}
-} catch (err) {
-console.error('❌ Error fetching data:', err.message);
-setError('❌ Connection error or CORS overflow.');
-}
-};
+        
+        const data = await res.json();
+        console.log('✅ Received data:', data);
 
-fetchPlants();
-setFilteredPlants(plants)
-}, []);
-useEffect(() => {
-  if (search){
-    setFilteredPlants(plants.filter(plant => 
-      plant.common_name?.toLowerCase().includes(search.toLowerCase() || '')
-    ));
-  } else {
-    setFilteredPlants(plants)
-  }
-  
-}, [search, plants]);
+        if (data && data.data) {
+          setPlants(data.data);
+          setLoading(false);
+        } else {
+          setError('⚠️ No plant data found!');
+        }
+      } catch (err) {
+        console.error('❌ Error fetching data:', err.message);
+        setError('❌ Connection error or CORS overflow.');
+      }
+    };
 
-return (
-<div className="p-4 container">
-<h1>Plants Library 🌿</h1>
-<p style={{color: "gray", marginBottom:'0.75rem', marginTop:'-20px'}}>Explore our curated collection of amazing plants - from rare exotics to easy-care favorites!</p>
-<input value={search} onChange={(e)=>setSearch(e.target.value)} placeholder='Search for a plant...'></input>
+    fetchPlants();
+  }, []); // لا داعي لإضافة plants هنا، الصحيح أن تبقى فاضية
+
+  return (
+    <div className="p-4 container">
+      <h1>Plants Library 🌿</h1>
+      <p style={{ color: "gray", marginBottom: '0.75rem', marginTop: '-20px' }}>
+        Explore our curated collection of amazing plants - from rare exotics to easy-care favorites!
+      </p>
       {error && <p className="text-red-500">{error}</p>}
-      {loading ? <PlantLoader/> : <div className="container">
-        {filteredPlants.map((plant) => (
-          <PlantCard key={plant.id} plant={plant} />
-        ))}
-      </div>}
+      {loading ? (
+        <PlantLoader />
+      ) : (
+        <div className="container">
+          {plants.map((plant) => (
+            <PlantCard key={plant.id} plant={plant} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
 
 export default PlantsLibrary;
+
