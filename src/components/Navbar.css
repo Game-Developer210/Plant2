@@ -8,9 +8,10 @@ nav {
     align-items: center;
     background-color: #51bc7f;
     color: white;
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
 }
 
 nav .title {
@@ -99,3 +100,5 @@ input{
         margin: 0.2rem 0.5rem;
     }
 }
+
+  
