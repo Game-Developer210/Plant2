@@ -13,7 +13,7 @@ const PlantsLibrary = () => {
   useEffect(() => {
     const fetchPlants = async () => {
       try {
-        const res = await fetch('/api/v1/plants?token=4sFVLc2wtQXu8CKFn_NycI0fE6YetBR9rBNGdD-sA6M&page_size=20');
+        const res = await fetch('/.netlify/functions/getPlants');
         if (!res.ok) throw new Error('Failed to fetch data');
         const data = await res.json();
         console.log('✅ Received data:', data);
