@@ -41,7 +41,37 @@
     font-size: 16px;
     border-radius: 10px;
     border: 1px solid #ccc;
+
   }
+
+  .plant-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .plant-info {
+    padding: 10px;
+  }
+  
+  .plant-info h3 {
+    margin: 10px 0 5px;
+    color: #006400;
+  }
+  
+  .plant-info p {
+    font-size: 14px;
+    color: #555;
+  }
+  
 
   .plant-card {
     background: white;

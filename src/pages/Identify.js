@@ -88,7 +88,7 @@ function Identify() {
     });
 
   return (
-    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '90vh'}}><div style={{ padding: '20px', placeItems: 'center' }}>
+    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '90vh' }}><div style={{ padding: '20px', placeItems: 'center' }}>
 <h2>Get to know your plant 📸</h2>
 <p className='description'>Send an image of your plant and our AI will analyze it</p>
 <input type="file" accept="image/*" onChange={handleImageUpload} />

@@ -1,6 +1,7 @@
 // src/components/PlantCard.js
 import React from 'react';
 import '../styles.css';
+
 const PlantCard = ({ plant }) => {
   return (
     <div className="border p-4 rounded shadow hover:shadow-lg transition-all">

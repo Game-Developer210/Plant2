@@ -43,7 +43,7 @@ const CameraPage = () => {
   };
 
   return (
-    <div className="text-center" style={{ textAlign: 'center', }}>
+    <div className="text-center" style={{ textAlign: 'center',paddingTop: '70px' }}>
       <h1>Welcome to my plant🌿</h1>
       <p>Explore the world of plants and identify your plant type</p>
 
