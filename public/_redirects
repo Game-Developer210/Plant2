@@ -1,2 +1,2 @@
 /*    /index.html   200
-/api/v1/plants/*  https://trefle.io/api.com/api/v1/plants/:splat  200
+/api/*   https://trefle.io/api/:splat   200
