@@ -13,7 +13,10 @@ import "./App.css";
 function App() {
   return (
     <Router>
+      <div className='App'>
         <Navbar />
+        <div className="background-container">
+        <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/identify" element={<Identify />} />
@@ -23,6 +26,9 @@ function App() {
           <Route path="/scan" element={<ScanPage />} />
           <Route path="/camera" element={<CameraPage />} />
           </Routes>
+        </div>
+        </div>
+     </div>
 </Router>
   );
 }
