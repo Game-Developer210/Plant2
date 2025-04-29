@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
-import logo from '../image/myPlant-nobg.webp'
+import logo from '../image/logo.png'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav>
       <Link to="/">
-      <img style={{width: '70px'}} src={logo} alt="my plant logo"></img>
+      <img style={{width: '90px'}} src={logo} alt="my plant logo"></img>
       </Link>
       <div className="navbar" onClick={() => setMenuOpen(!menuOpen)}>
         <span></span>
