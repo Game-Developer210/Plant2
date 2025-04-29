@@ -2,28 +2,55 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* خلفية متحركة */
+.background-container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.background-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('logo.png'); /* ضع مسار صورتك */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: moveBackground 20s infinite alternate;
+  z-index: -2;
+}
+
+.background-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(144, 238, 144, 0.4); /* لون أخضر فاتح مع شفافية */
+  z-index: -1;
+}
+
+/* حركة خفيفة للخلفية */
+@keyframes moveBackground {
+  0% {
+    background-position: center top;
+  }
+  100% {
+    background-position: center bottom;
   }
 }
-
-.App-header {
-  background-color: #ea1708;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-content {
+  padding-top: 80px; /* المسافة تحت الـ Navbar */
 }
-
-.App-link {
-  color: #e94f08;
-}
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+} 
