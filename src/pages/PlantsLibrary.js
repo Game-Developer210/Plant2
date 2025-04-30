@@ -52,7 +52,7 @@ const PlantsLibrary = () => {
       <input
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        placeholder='Search for a plant...'
+        placeholder='🔍Search for a plant...'
         style={{ padding: '0.5rem', width: '100%', maxWidth: '1000px', marginBottom: '20px' }}
       />
       {error && <p className="text-red-500">{error}</p>}
