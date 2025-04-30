@@ -11,12 +11,11 @@ const Navbar = () => {
       <Link to="/">
       <img style={{width: '90px'}} src={logo} alt="my plant logo"></img>
       </Link>
-      <div className="navbar" onClick={() => setMenuOpen(!menuOpen)}>
+      <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div className="navbar"></div>
       <ul className={menuOpen ? "open" : ""}>
         <li>
           <NavLink to="/">Home</NavLink>
