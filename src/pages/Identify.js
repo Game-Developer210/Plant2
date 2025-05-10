@@ -6,7 +6,7 @@ function Identify() {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const API_KEY = process.env.REACT_APP_API_KEY;
+  //const API_KEY = process.env.REACT_APP_API_KEY;
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
@@ -26,11 +26,10 @@ function Identify() {
     const base64Image = await toBase64(imageFile);
 
     try {
-      const response = await fetch("https://api.plant.id/v2/identify", {
+      const response = await fetch("https://api.plant.id/v2/identifyPlant", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Api-Key": API_KEY,
         },
         body: JSON.stringify({
           images: [base64Image],
