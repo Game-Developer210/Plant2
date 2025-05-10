@@ -26,7 +26,7 @@ function Identify() {
     const base64Image = await toBase64(imageFile);
 
     try {
-      const response = await fetch("https://plant.id/api/v3/identify", {
+      const response = await fetch("https://api.plant.id/v2/identify", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
