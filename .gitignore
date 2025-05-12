@@ -9,8 +9,6 @@ node_modules/
 build/
 dist/
 
-# البيئة
-.env
 
 # ملفات Netlify Functions
 netlify/functions/node_modules/

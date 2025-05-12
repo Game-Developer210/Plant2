@@ -1,0 +1,19 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Seeb",
+			"country": {
+				"code": "OM",
+				"name": "Oman"
+			},
+			"subdivision": {
+				"code": "MA",
+				"name": "Muscat"
+			},
+			"timezone": "Asia/Muscat",
+			"latitude": 23.6673,
+			"longitude": 58.1912
+		},
+		"timestamp": 1746953253309
+	}
+}

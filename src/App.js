@@ -8,6 +8,7 @@ import PlantsLibrary from './pages/PlantsLibrary';
 import QRCodePage from './pages/QRCodePage';
 import ScanPage from './pages/ScanPage';
 import CameraPage from './pages/CameraPage';
+import TestCameraPage from './pages/TestCameraPage';
 import "./App.css";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/qr" element={<QRCodePage />} />
           <Route path="/scan" element={<ScanPage />} />
           <Route path="/camera" element={<CameraPage />} />
+          <Route path="/testcamera" element={<TestCameraPage />} />
           </Routes>
         </div>
         </div>
