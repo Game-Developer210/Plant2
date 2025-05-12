@@ -12,7 +12,7 @@ dist/
 
 # ملفات Netlify Functions
 netlify/functions/node_modules/
-netlify/functions/package-lock.json
+#netlify/functions/package-lock.json
 
 # ملفات أخرى
 *.log
