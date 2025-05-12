@@ -1,3 +1,7 @@
 [dev]
   functions = "netlify/functions"
+<<<<<<< HEAD
   publish = "build"
+=======
+  publish = "build"
+>>>>>>> 90d1d0c466ef6e6278d81d4198404d108d015e9d
