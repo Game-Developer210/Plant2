@@ -31,3 +31,6 @@ coverage/
 .eslintcache
 .next/
 out/
+
+# Local Netlify folder
+.netlify
